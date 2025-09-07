@@ -1,0 +1,13 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: always
+    ports:
+      - "1003:8096"
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ${MOVIES}:/films:ro
+      - ${SERIES}:/series:ro
+    env_file: ./jellyfin.env

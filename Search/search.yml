@@ -1,0 +1,9 @@
+services:
+  searxng:
+    image: 'docker.io/searxng/searxng:latest'
+    volumes:
+        - './data/:/var/cache/searxng/'
+        - './config/:/etc/searxng/'
+    ports:
+        - '1015:8080'
+    container_name: searxng

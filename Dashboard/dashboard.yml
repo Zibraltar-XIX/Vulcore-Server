@@ -1,0 +1,10 @@
+services:
+  flame:
+    image: pawelmalak/flame
+    container_name: flame
+    restart: always
+    volumes:
+      - ./data:/app/data
+    ports:
+      - 1010:5005
+    env_file: ./dashboard.env
