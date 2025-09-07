@@ -5,6 +5,6 @@ services:
     restart: unless-stopped
     env_file: ./vaultwarden.env
     ports:
-      - "1008:80"
+      - "1009:80"
     volumes:
       - ${DATA}:/data

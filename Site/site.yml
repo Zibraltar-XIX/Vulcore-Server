@@ -1,0 +1,10 @@
+services:
+  site:
+    image: nginx:alpine
+    container_name: site
+    restart: always
+    env_file: ./site.env
+    volumes:
+      - ${DATA}:/usr/share/nginx/html:ro
+    ports:
+      - 1011:80
